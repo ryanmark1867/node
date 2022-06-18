@@ -26,3 +26,16 @@ It learns deep ensembles of oblivious differentiable decision trees on tabular d
  * The notebook downloads data from dropbox. You will need __1-5Gb__ of disk space depending on dataset.
 
 We showcase two typical learning scenarios for classification and regression. Please consult the original paper for training details.
+
+Items that needed to be updated to get year_node_8layers.ipynb to work in Colab:
+* needed to pip install: tensorboardX, qhoptim, category_encoders
+* needed to crawl through imports to get them resolve correctly
+
+`from lib import data as datalib
+from lib import arch
+from lib import nn_utils
+from lib import utils
+from lib import trainer as trainerlib`
+
+* needed to update references to items from the above imports to refer to the specific import
+
